@@ -1,0 +1,14 @@
+{
+  "server": {
+    "host": "",
+    "port": "8082",
+    "baseurl": ""
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": "6379",
+    "db": 0
+  },
+  "APP_ENV": "production",
+  "webpath": "./web/dist"
+}
