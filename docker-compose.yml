@@ -1,0 +1,10 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  web:
+    build: .
+    ports:
+      - "8082:8082"
+    environment:
+      - REDIS_HOST=redis
+  redis:
+    image: redis:6.2.6

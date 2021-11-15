@@ -54,10 +54,10 @@ Build:
 docker build . -t urlshortener
 ```
 
-Run:
+Run as service:
 
 ```
-docker run -p 8082:8082 urlshortener
+docker-compose up -d
 ```
 
 ## Contributing

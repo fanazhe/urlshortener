@@ -29,7 +29,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build --tags "release" -ldflags="-w -s" -o urlsh
 # Backend generated
 
 # Use redis docker to run
-FROM redis:6.2.6 as redis
+FROM alpine:3.14.3
 
 # Copy frontend asset
 RUN mkdir -p /app/web/dist
@@ -41,5 +41,7 @@ RUN mkdir -p /app/config
 COPY config/config.docker.json /app/config/config.json
 
 WORKDIR /app
+
+EXPOSE 8082
 
 CMD ["/app/urlshortener"]
